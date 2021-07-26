@@ -1,0 +1,71 @@
+.header {
+    &__hero {
+        background-image: url("../img/image-banner.png");
+        height: 110px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include respond-to($min-laptop){
+            height: 290px;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 110px;
+        border-bottom: 1px solid $silver;
+
+    }
+
+
+    &__info {
+        display: flex;
+        flex-grow: 5;
+        padding-left: 4%;
+
+    }
+
+    &__avatar {
+        background-image: url("../img/profile-image.png");
+        background-size: cover;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 35px;
+    }
+
+    &__name {
+        font-weight: $font-bold;
+        font-size: $font-size-xx-large;
+        font-family: $montserrat-font;
+    }
+
+    &__followers {
+        color: $gray;
+        font-family: $opensans-font;
+    }
+
+    &__actions {
+        display: none;
+        padding-right: 4%;
+
+        @include respond-to($min-laptop) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+
+}
+
